@@ -17,6 +17,9 @@
 		7E8C04A627FF5FA300A3663D /* ProjetoAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8C04A527FF5FA300A3663D /* ProjetoAPITests.swift */; };
 		7E8C04B027FF5FA300A3663D /* ProjetoAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8C04AF27FF5FA300A3663D /* ProjetoAPIUITests.swift */; };
 		7E8C04B227FF5FA300A3663D /* ProjetoAPIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8C04B127FF5FA300A3663D /* ProjetoAPIUITestsLaunchTests.swift */; };
+		7E8C04BF27FF641A00A3663D /* ListaDaApiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8C04BE27FF641A00A3663D /* ListaDaApiTableViewController.swift */; };
+		7E8C04C127FF64A000A3663D /* Pessoas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8C04C027FF64A000A3663D /* Pessoas.swift */; };
+		7E8C04C327FF721A00A3663D /* InitApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8C04C227FF721A00A3663D /* InitApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		7E8C04AB27FF5FA300A3663D /* ProjetoAPIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjetoAPIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E8C04AF27FF5FA300A3663D /* ProjetoAPIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetoAPIUITests.swift; sourceTree = "<group>"; };
 		7E8C04B127FF5FA300A3663D /* ProjetoAPIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetoAPIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7E8C04BE27FF641A00A3663D /* ListaDaApiTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaDaApiTableViewController.swift; sourceTree = "<group>"; };
+		7E8C04C027FF64A000A3663D /* Pessoas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pessoas.swift; sourceTree = "<group>"; };
+		7E8C04C227FF721A00A3663D /* InitApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,9 @@
 				7E8C049927FF5FA300A3663D /* LaunchScreen.storyboard */,
 				7E8C049C27FF5FA300A3663D /* Info.plist */,
 				7E8C049427FF5FA100A3663D /* ProjetoAPI.xcdatamodeld */,
+				7E8C04BE27FF641A00A3663D /* ListaDaApiTableViewController.swift */,
+				7E8C04C027FF64A000A3663D /* Pessoas.swift */,
+				7E8C04C227FF721A00A3663D /* InitApi.swift */,
 			);
 			path = ProjetoAPI;
 			sourceTree = "<group>";
@@ -261,7 +270,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E8C04C127FF64A000A3663D /* Pessoas.swift in Sources */,
+				7E8C04C327FF721A00A3663D /* InitApi.swift in Sources */,
 				7E8C049627FF5FA100A3663D /* ProjetoAPI.xcdatamodeld in Sources */,
+				7E8C04BF27FF641A00A3663D /* ListaDaApiTableViewController.swift in Sources */,
 				7E8C049027FF5FA100A3663D /* ViewController.swift in Sources */,
 				7E8C048C27FF5FA100A3663D /* AppDelegate.swift in Sources */,
 				7E8C048E27FF5FA100A3663D /* SceneDelegate.swift in Sources */,
