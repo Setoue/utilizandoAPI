@@ -33,15 +33,28 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         if let p = pessoaId{
-            primeiroNomeTextField.text = pessoas.first_name
-            segundoNomeTextField.text = pessoas.last_name
-            emailTextField.text = pessoas.email
+            primeiroNomeTextField.text = pessoaId?.first_name
+            segundoNomeTextField.text = pessoaId?.last_name
+            emailTextField.text = pessoaId?.email
+            setImage()
 //
 //            imagemOulet.image = imagem
         }
         
     }
-    
+    func setImage(){
+            let url = URL (string: pessoaId!.avatar!)
+            
+            do{
+                let data = try Data(contentsOf: url!)
+                
+                imagemOulet.image = UIImage(data: data)
+            }
+            catch {
+                print("Erro ao baixar a imagem")
+            }
+            
+        }
     
     func save(){
         let url = URL(string: "https://reqres.in/api/users")!
