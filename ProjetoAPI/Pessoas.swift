@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Pessoas: Codable{
     var first_name: String?
@@ -13,4 +14,5 @@ class Pessoas: Codable{
     var email: String?
     var id: Int?
     var avatar: String?
+    
 }

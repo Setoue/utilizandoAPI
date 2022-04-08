@@ -82,17 +82,56 @@ class ListaDaApiTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+            let id = listaDePessoas[indexPath.row].id!
+            
+            let urlD = "https://reqres.in/api/users/\(id)"
+            let url = URL(string: urlD)!
+            
+            var requisicao = URLRequest(url: url)
+            requisicao.httpMethod = "DELETE"
+            
+            requisicao.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+            let pessoas = URLSession.shared.dataTask(with: requisicao){
+                (dados, resposta, erro) in
+                if (erro == nil){
+                    
+                    self.listaDePessoas.remove(at: indexPath.row)
+                    print("Pessoa deletar")
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                } else {
+                    print("Erro ao criar pessoa")
+                }
+            }
+        }
     }
-    */
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+                //pegando o professor que gostariamos de alterar
+        let pessoaUtil = listaDePessoas[indexPath.row]
+        performSegue(withIdentifier: "segueViewController", sender: pessoaUtil)
+
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "segueViewController"{
+            
+            let destinoControlador = segue.destination as! ViewController
+            
+            guard let i = sender as? Pessoas else{ return }
+            
+            destinoControlador.pessoaId = i
+        }
+    }
+    
 
     /*
     // Override to support rearranging the table view.
